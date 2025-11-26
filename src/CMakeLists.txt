@@ -69,6 +69,7 @@ if(TARGET Qt::Gui AND TARGET Qt::qsb AND QT_FEATURE_qml_animation)
     add_subdirectory(quicktemplates)
     add_subdirectory(quickcontrolsimpl)
     add_subdirectory(quickcontrols)
+    add_subdirectory(labs)
     if(QT_FEATURE_quicktemplates2_container)
         add_subdirectory(quickdialogs)
     endif()
@@ -86,9 +87,8 @@ else()
         TYPE NOTE
         MESSAGE "Qt Quick modules not built due to not finding the qtshadertools 'qsb' tool."
     )
+    add_subdirectory(labs)
 endif()
-
-add_subdirectory(labs)
 
 # special case begin
 # These need to be included here since they have dependencies on the modules
